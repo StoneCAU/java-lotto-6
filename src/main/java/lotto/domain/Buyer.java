@@ -7,7 +7,7 @@ public class Buyer {
     public int purchaseCount;
 
     private Buyer(int purchaseCost) {
-        getPurchaseCount();
+        purchaseCount = getPurchaseCount(purchaseCost);
 
         this.purchaseCost = purchaseCost;
     }
@@ -16,7 +16,7 @@ public class Buyer {
         return new Buyer(purchaseCost);
     }
 
-    private int getPurchaseCount() {
-        return purchaseCost / LOTTO_COST.getValue();
+    private int getPurchaseCount(int payment) {
+        return payment / LOTTO_COST.getValue();
     }
 }
