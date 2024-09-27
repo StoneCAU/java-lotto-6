@@ -4,7 +4,7 @@ import static lotto.global.config.LottoConfig.LOTTO_COST;
 
 public class Buyer {
     private int purchaseCost;
-    private int purchaseCount;
+    public int purchaseCount;
 
     private Buyer(int purchaseCost) {
         getPurchaseCount();
