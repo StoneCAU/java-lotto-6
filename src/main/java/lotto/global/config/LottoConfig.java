@@ -9,6 +9,10 @@ public enum LottoConfig {
     NUMBER_OF_PICKS(6),
     NUMBER_OF_BONUS(1);
 
+    public int getValue() {
+        return value;
+    }
+
     private final int value;
 
     LottoConfig(int value) {
