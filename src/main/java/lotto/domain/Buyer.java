@@ -12,7 +12,7 @@ public class Buyer {
         this.purchaseCost = purchaseCost;
     }
 
-    public static Buyer create(int purchaseCost) {
+    public static Buyer createBuyer(int purchaseCost) {
         return new Buyer(purchaseCost);
     }
 

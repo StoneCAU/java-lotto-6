@@ -11,6 +11,6 @@ public class BuyerController {
         PrintStaticMessage(ASK_PURCHASE_PRICE_MESSAGE);
 
         int cost = Integer.getInteger(InputView.Input());
-        return Buyer.create(cost);
+        return Buyer.createBuyer(cost);
     }
 }
