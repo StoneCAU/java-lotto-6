@@ -8,4 +8,9 @@ public class OutputView {
     public static void PrintDynamicMessage(String message) {
         System.out.println(message);
     }
+
+    public static void PrintNewLine() {
+        System.out.println();
+    }
+
 }
