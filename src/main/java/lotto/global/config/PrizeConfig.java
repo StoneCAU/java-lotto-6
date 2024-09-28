@@ -10,7 +10,6 @@ public enum PrizeConfig {
 
     private final int price;
     private final int rank;
-
     private final int count;
 
     public static int getPriceByRank(int rank) {
