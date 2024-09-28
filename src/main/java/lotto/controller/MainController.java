@@ -13,5 +13,6 @@ public class MainController {
 
         Prize prize = PrizeController.setWinningNumber();
 
+        StatisticsController.getStatistics(lottos, prize, buyer);
     }
 }

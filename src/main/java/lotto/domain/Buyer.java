@@ -19,4 +19,8 @@ public class Buyer {
     private int getPurchaseCount(int payment) {
         return payment / LOTTO_COST.getValue();
     }
+
+    public int getPurchaseCost() {
+        return purchaseCost;
+    }
 }

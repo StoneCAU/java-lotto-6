@@ -18,6 +18,8 @@ public class PrizeController {
 
         int bonusNumber = setBonusNumber();
 
+        PrintNewLine();
+
         return Prize.createPrize(numbers, bonusNumber);
     }
 

@@ -6,9 +6,8 @@ public enum OutputMessage {
     ASK_WINNING_NUMBER_MESSAGE("당첨 번호를 입력해 주세요."),
     ASK_BONUS_NUMBER_MESSAGE("보너스 번호를 입력해 주세요."),
     WINNING_STATISTICS_MESSAGE("당첨 통계\n---"),
-    WINNING_STATISTICS_DETAILS_MESSAGE("%d개 일치 (%s원) - %d개"),
-    SECOND_WINNING_DETAILS_MESSAGE("%d개 일치, 보너스 볼 일치 (%s원) - %d개"),
-    RATE_OF_RETURN_MESSAGE("총 수익률은 %f%입니다.");
+    WINNING_STATISTICS_DETAILS_MESSAGE("%d개 일치%s - %d개"),
+    PROFITABILITY_MESSAGE("총 수익률은 %.1f%%입니다.");
 
     private final String message;
 

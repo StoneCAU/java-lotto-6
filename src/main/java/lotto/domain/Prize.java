@@ -14,4 +14,13 @@ public class Prize {
     public static Prize createPrize(List<Integer> numbers, int bonusNumber) {
         return new Prize(numbers, bonusNumber);
     }
+
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
+
+    public int getBonusNumber() {
+        return bonusNumber;
+    }
+
 }

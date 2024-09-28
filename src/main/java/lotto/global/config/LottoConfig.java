@@ -7,7 +7,9 @@ public enum LottoConfig {
     MAX_LOTTO_NUM(45),
 
     NUMBER_OF_PICKS(6),
-    NUMBER_OF_BONUS(1);
+    NUMBER_OF_BONUS(1),
+
+    NUMBER_OF_WINNER(5);
 
     public int getValue() {
         return value;
