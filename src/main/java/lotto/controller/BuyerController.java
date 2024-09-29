@@ -15,12 +15,12 @@ import static lotto.view.output.OutputView.*;
 
 public class BuyerController {
     public static Buyer requestCost() {
-        PrintStaticMessage(ASK_PURCHASE_PRICE_MESSAGE);
-
         return ExceptionHandler.execute(BuyerController::purchase);
     }
 
     private static Buyer purchase() {
+        PrintStaticMessage(ASK_PURCHASE_PRICE_MESSAGE);
+
         String input = InputView.Input();
         int cost;
 
