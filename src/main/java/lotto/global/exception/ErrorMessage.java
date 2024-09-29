@@ -10,9 +10,9 @@ public enum ErrorMessage {
     INVALID_WINNING_NUMBER_MESSAGE("로또 번호는 1부터 45 사이의 숫자여야 합니다."),
     NON_DIGIT_ERROR_MESSAGE("로또 번호는 숫자만 입력할 수 있습니다."),
 
-    INVALID_DELIMITER_MESSAGE("당첨 번호는 '',''로 구분되어 입력되어야 합니다."),
-    DELIMITER_ERROR_MESSAGE("구분자('','')는 숫자 사이에 여러번 입력할 수 없습니다."),
-    INVALID_PICK_NUMBER_MESSAGE(format("%d개의 숫자만 입력할 수 있습니다.", NUMBER_OF_PICKS.getValue())),
+    EMPTY_CONTAINS_ERROR_MESSAGE("공백 문자 없이 입력되어야 합니다."),
+    INVALID_DELIMITER_MESSAGE("당첨 번호는 ','로 구분되어야 합니다."),
+    INVALID_PICK_NUMBER_MESSAGE(format("총 %d개의 숫자가 입력되어야 합니다.", NUMBER_OF_PICKS.getValue())),
     DUPLICATED_MESSAGE("중복된 당첨 번호는 입력할 수 없습니다."),
 
     DUPLICATED_BONUS_NUMBER_MESSAGE("당첨 번호와 중복되는 보너스 번호는 입력할 수 없습니다."),

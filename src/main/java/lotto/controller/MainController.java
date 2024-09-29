@@ -10,7 +10,7 @@ public class MainController {
 
         Lottos lottos = LottoController.generateLottos(buyer.purchaseCount);
 
-        Prize prize = PrizeController.setWinningNumber();
+        Prize prize = PrizeController.pickWinningNumber();
 
         StatisticsController.getStatistics(lottos, prize, buyer);
     }
