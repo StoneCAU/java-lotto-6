@@ -15,8 +15,7 @@ public enum ErrorMessage {
     INVALID_PICK_NUMBER_MESSAGE(format("총 %d개의 숫자가 입력되어야 합니다.", NUMBER_OF_PICKS.getValue())),
     DUPLICATED_MESSAGE("중복된 당첨 번호는 입력할 수 없습니다."),
 
-    DUPLICATED_BONUS_NUMBER_MESSAGE("당첨 번호와 중복되는 보너스 번호는 입력할 수 없습니다."),
-    INVALID_PICK_BONUS_MESSAGE(format("보너스 번호는 %d개만 입력할 수 있습니다.", NUMBER_OF_BONUS.getValue()));
+    DUPLICATED_BONUS_NUMBER_MESSAGE("당첨 번호와 중복되는 보너스 번호는 입력할 수 없습니다.");
 
     public String getMessage() {
         return message;

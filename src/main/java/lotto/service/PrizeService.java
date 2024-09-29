@@ -29,6 +29,25 @@ public class PrizeService {
         return numbers;
     }
 
+    public static int validateBonusNumber(List<Integer> winningNumbers, String input) {
+        int bonusNumber;
+
+        if (isContainedLetter(input)) throw new LottoException(NON_DIGIT_ERROR_MESSAGE);
+        if (isContainedEmpty(input)) throw new LottoException(EMPTY_CONTAINS_ERROR_MESSAGE);
+
+        bonusNumber = Integer.parseInt(input);
+
+        if (!isValidNumber(bonusNumber)) throw new LottoException(INVALID_WINNING_NUMBER_MESSAGE);
+        if (isDuplicatedBonus(winningNumbers, bonusNumber)) throw new LottoException(DUPLICATED_BONUS_NUMBER_MESSAGE);
+
+        return bonusNumber;
+    }
+
+    private static boolean isDuplicatedBonus(List<Integer> winningNumbers, int bonusNumber) {
+        return winningNumbers.stream()
+                .anyMatch(winningNumber -> winningNumber.equals(bonusNumber));
+    }
+
     private static boolean isContainedEmpty(String input) {
         return input.contains(" ");
     }

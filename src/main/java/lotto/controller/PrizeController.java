@@ -18,23 +18,25 @@ public class PrizeController {
     }
 
     private static Prize setWinningNumber() {
-        PrintStaticMessage(ASK_WINNING_NUMBER_MESSAGE);
-        List<Integer> numbers = PrizeService.parsingNumbers(InputView.Input());
+        List<Integer> numbers;
 
-        int bonusNumber = setBonusNumber();
+        PrintStaticMessage(ASK_WINNING_NUMBER_MESSAGE);
+        numbers = PrizeService.parsingNumbers(InputView.Input());
 
         PrintNewLine();
 
-        return Prize.createPrize(numbers, bonusNumber);
+        return ExceptionHandler.execute(() -> setBonusNumber(numbers));
     }
 
-    private static int setBonusNumber() {
+    private static Prize setBonusNumber(List<Integer> numbers) {
         String input;
+        int bonusNumber;
 
-        PrintNewLine();
         PrintStaticMessage(ASK_BONUS_NUMBER_MESSAGE);
 
         input = InputView.Input();
-        return Integer.parseInt(InputView.Input());
+        bonusNumber = PrizeService.validateBonusNumber(numbers, input);
+
+        return Prize.createPrize(numbers, bonusNumber);
     }
 }
