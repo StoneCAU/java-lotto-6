@@ -16,11 +16,11 @@ public class Buyer {
         return new Buyer(purchaseCost);
     }
 
-    private int getPurchaseCount(int payment) {
-        return payment / LOTTO_COST.getValue();
-    }
-
     public int getPurchaseCost() {
         return purchaseCost;
+    }
+
+    private int getPurchaseCount(int payment) {
+        return payment / LOTTO_COST.getValue();
     }
 }

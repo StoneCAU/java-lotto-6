@@ -6,10 +6,9 @@ import lotto.domain.Prize;
 
 public class MainController {
     public static void start() {
-        Buyer buyer = BuyerController.payment();
-        int purchaseCount = BuyerController.purchase(buyer);
+        Buyer buyer = BuyerController.requestCost();
 
-        Lottos lottos = LottoController.generateLottos(purchaseCount);
+        Lottos lottos = LottoController.generateLottos(buyer.purchaseCount);
 
         Prize prize = PrizeController.setWinningNumber();
 
